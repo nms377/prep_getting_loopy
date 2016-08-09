@@ -37,6 +37,7 @@ var stringOfNumbers = '';
 
 /*Then write a _FOR_ loop that appends a Number value to that string starting from `10` all the way up to and including `20`.*/
 
+// MY WORK
 for (var i=10; i <= 21; i++){
 	stringOfNumbers+=[i];}
 
@@ -44,7 +45,15 @@ console.log(stringOfNumbers);
 
 /***bonus:** could you take the code inside of this _FOR_ loop and encapsulate it inside of a function called `appendToString` and still achieve the same result?*/
 
+//Bonus MY WORK
+function appendToString(num){
+	for (var i=0; i<= 21; i++){
+		num+=[i];
+		console.log(stringOfNumbers);
+	}
+}
 
+appendToString(stringOfNumbers);
 
 /*## `Add only even numbrs to an array`
 Declare a variable named `evenNumberArray`.
