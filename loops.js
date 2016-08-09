@@ -11,13 +11,22 @@ Within the _FOR_ loop, use `console.log` to:
 - Log what is at index `i` in the array. Use a message like `Value at Index is: ` and append the value stored within the Array at that index.*/
 
 /***bonus:** could you take the code inside of this FOR loop and encapsulate it inside of a function called `printContent` and still achieve the same result? This new function should accept two parameters.*/
-function presidentsNames (names){
+
+//Create _FOR_ loop & console.log'd
+for (var i = 0; i < presidents.length; i++){
+		console.log(presidents[i]);
+	console.log("Answer #1 " + "The value of i is " + [i]);
+}
+
+//Bonus creating a function that achieves the same result. I did not use 2 parameters.
+function printContent (names){
 	for (var i = 0; i < names.length; i++){
 		console.log(names[i]);
+		console.log("BONUS: " + "The value of i is " + [i]);
 	}
 }
 
-presidentsNames(presidents);
+printContent(presidents);
 
 
 /*Declare a variable named `stringOfNumbers` and set it's value to `''` (an empty String).*/
