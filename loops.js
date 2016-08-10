@@ -60,6 +60,7 @@ Declare a variable named `evenNumberArray`.
 
 Use a _FOR_ loop to add only even numbers to an Array. Add `50` even numbers to the `evenNumberArray` starting with the value `0`.*/
 
+//MY WORK
  var evenNumberArray = [];
 
  for (var i=0; i<=99; i++){
@@ -82,7 +83,16 @@ Example result should look like:
 ```javascript
 `[ 'turn' , 'nope' , 'down' , 'nope' , 'for' , 'nope' , 'what' ]`*/
 
+//MY WORK
+var oopsArray = ['turn', , 'down', , 'for', , 'what'];
+var newArray = [];
 
+for (var i=0; i<oopsArray.length; i++){
+	if(i % 2 === 1){
+		oopsArray[i] = 'nope';
+	}
+}
+ console.log(oopsArray);
 
 /*## `Going backwards?!`
 Using a _FOR_ loop, iterate through the Array stored at `oopsArray` **backwards**. `console.log` each value in the Array.
@@ -98,8 +108,14 @@ nope
 turn
 ```*/
 
+//MY WORK
+var backwards = [];
 
+for (var i=oopsArray.length -1; i>=0; i--){
+	backwards.push(oopsArray[i]);
+}
 
+console.log(backwards);
 
 /*## `isNapTime`
 Declare a variable named `isNapTime`. Set it to `false`
