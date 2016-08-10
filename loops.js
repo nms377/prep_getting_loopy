@@ -129,8 +129,23 @@ Declare a function named `nap`. This function takes in a single parameter called
 
 Now, Write a FOR loop that iterates through the `napSchedule` array and runs the function `nap` while passing in the value at the current position of `napSchedule` into the `nap` function.*/
 
+var isNapTime = false;
 
+var napSchedule = [false, false, true, false, true, true];
 
+function nap(schedule){
+	if (schedule === true){
+		console.log('ZzZzZzZz');
+	} else {
+		console.log('Gotta get to work!');
+		isNapTime = true;
+	}
+}
+	for (var i=0; i<napSchedule.length; i++){
+		nap(napSchedule[i]);
+	}
+
+console.log(nap(isNapTime));
 
 /*Declare a variable named `valuesArray` and set it's value to be an array, `[99, 66, 829, 1941, 8, 76]`.
 
@@ -138,6 +153,19 @@ Declare a function named `copyArray` which takes two arguments: `originArray` an
 
 To get started, below your function declaration, call your function and pass in the two variables, `valuesArray` and `copyOfValuesArray`. After that, use `console.log` to to inspect the values of `valuesArray` and `copyOfValuesArray` to make sure they have the same values (which means your function worked!).*/
 
+var valuesArray = [99, 66, 829, 1941, 8, 76];
+var copyOfValuesArray = [];
+
+function copyArray(originArray, destinationArray){
+	for ( var i=0; i<originArray.length; i++){
+		destinationArray.push(originArray[i]);
+	}
+
+	return destinationArray;
+}
+
+copyArray(valuesArray, copyOfValuesArray);
+console.log(copyArray(valuesArray, copyOfValuesArray));
 
 
 
