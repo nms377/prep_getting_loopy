@@ -31,6 +31,21 @@ printContent(presidents);
 
 //CLASS WORK
 
+for(var i=0; i<presidents.length; i++){
+	console.log(i);
+	console.log("CLASS WORK " + presidents[i]);
+	console.log("The value of i is: " + [i]);
+	console.log("The value of index is: " + [i] + " " + presidents[i]);
+}
+
+function printContent(names){
+	for(var i=0; i<names.length; i++){
+		console.log(names[i]);
+	} return names;
+}
+
+printContent(presidents);
+
 /*Declare a variable named `stringOfNumbers` and set it's value to `''` (an empty String).*/
 
 var stringOfNumbers = '';
@@ -43,8 +58,23 @@ for (var i=10; i <= 21; i++){
 
 console.log(stringOfNumbers);
 
-//CLASS WORK
+//CLASS 
+var numStr = "";
 
+for(var i=10; i<21; i++){
+	stringOfNumbers += i; // stringOfNumbers = stringOfNumbers + i
+}
+
+console.log("Class Work: " + stringOfNumbers);
+
+function appendToString(string){
+	for(var i=10; i<21; i++){
+		string += i;
+	}
+	return string;
+}
+
+console.log(appendToString(numStr));
 /***bonus:** could you take the code inside of this _FOR_ loop and encapsulate it inside of a function called `appendToString` and still achieve the same result?*/
 
 //Bonus MY WORK
@@ -218,3 +248,56 @@ function generateArrayOfStrings(storage){
 console.log(generateArrayOfStrings(miscStorage));
 
 //CLASS WORK
+
+//MY WORK
+var currentClass = [
+  {
+    name: 'Doug',
+    graduated: false,
+    enrolled: true
+  },
+  {
+    name: 'Pat',
+    graduated: false,
+    enrolled: false
+  },
+  {
+    name: 'Marsha',
+    graduated: false,
+    enrolled: false
+  },
+  {
+    name: 'Moira',
+    graduated: false,
+    enrolled: true
+  },
+  {
+    name: 'Ben',
+    graduated: false,
+    enrolled: true
+  },
+  {
+    name: 'Nigel the Giraffe',
+    graduated: false,
+    enrolled: false
+  },
+  {
+    name: 'Brandon the Shark',
+    graduated: false,
+    enrolled: true
+  }
+];
+
+function graduateAndSetNewClass(student){
+	for(var i=0; i<student.length; i++){
+		var currentStudent = student [i];
+		if(currentClass.enrolled === true){
+		currentClass.graduated = true;
+		} else {
+			currentClass.enrolled = true;
+		}
+	}
+		return student;
+}
+
+console.log(graduateAndSetNewClass(currentClass));
