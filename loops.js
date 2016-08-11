@@ -43,6 +43,8 @@ for (var i=10; i <= 21; i++){
 
 console.log(stringOfNumbers);
 
+//CLASS WORK
+
 /***bonus:** could you take the code inside of this _FOR_ loop and encapsulate it inside of a function called `appendToString` and still achieve the same result?*/
 
 //Bonus MY WORK
@@ -71,6 +73,8 @@ Use a _FOR_ loop to add only even numbers to an Array. Add `50` even numbers to 
 
  console.log(evenNumberArray);
 
+ //CLASS WORK
+
 /*## `Accessing only the odd indexes of an Array - 'Not Even Brah'`
 Someone forgot to fill out this array! Oh noes...
 
@@ -93,6 +97,8 @@ for (var i=0; i<oopsArray.length; i++){
 	}
 }
  console.log(oopsArray);
+
+ //CLASS WORK
 
 /*## `Going backwards?!`
 Using a _FOR_ loop, iterate through the Array stored at `oopsArray` **backwards**. `console.log` each value in the Array.
@@ -117,6 +123,8 @@ for (var i=oopsArray.length -1; i>=0; i--){
 
 console.log(backwards);
 
+//CLASS WORK
+
 /*## `isNapTime`
 Declare a variable named `isNapTime`. Set it to `false`
 
@@ -129,6 +137,7 @@ Declare a function named `nap`. This function takes in a single parameter called
 
 Now, Write a FOR loop that iterates through the `napSchedule` array and runs the function `nap` while passing in the value at the current position of `napSchedule` into the `nap` function.*/
 
+//MY WORK
 var isNapTime = false;
 
 var napSchedule = [false, false, true, false, true, true];
@@ -147,12 +156,15 @@ function nap(schedule){
 
 console.log(nap(isNapTime));
 
+//CLASS WORK
+
 /*Declare a variable named `valuesArray` and set it's value to be an array, `[99, 66, 829, 1941, 8, 76]`.
 
 Declare a function named `copyArray` which takes two arguments: `originArray` and `destinationArray`. Inside of this function you will loop through the contents of `originArray` and push each value into `destinationArray`.
 
 To get started, below your function declaration, call your function and pass in the two variables, `valuesArray` and `copyOfValuesArray`. After that, use `console.log` to to inspect the values of `valuesArray` and `copyOfValuesArray` to make sure they have the same values (which means your function worked!).*/
 
+//MY WORK
 var valuesArray = [99, 66, 829, 1941, 8, 76];
 var copyOfValuesArray = [];
 
@@ -168,7 +180,7 @@ copyArray(valuesArray, copyOfValuesArray);
 console.log(copyArray(valuesArray, copyOfValuesArray));
 
 
-
+//CLASS WORK
 
 /*![final-boss](https://s3.amazonaws.com/uploads.hipchat.com/54891/2015941/zamX8AqbgYw0QJ8/giphy.gif)
 
@@ -189,3 +201,20 @@ Your function will iterate through the `class` argument and check each student's
 If the `enrolled` property is set to `true` then change that student's `graduated` property to `true`. Otherwise, if `enrolled` is set to `false` then change `enrolled` to `true` leaving `graduated` alone and unchanged.
 */
 
+//MY WORK
+var miscStorage = [ [], 'Carrots', 9, 'Beets', {}, {name: "Todd B."}, 'Mush'];
+var newerArray = [];
+
+function generateArrayOfStrings(storage){
+	for(var i=0; i<storage.length; i++){
+		if(typeof storage[i]=== typeof ''){
+		newerArray.push(storage[i]);
+	}
+	}
+	return newerArray;
+}
+
+/*generateArrayOfStrings(miscStorage);*/
+console.log(generateArrayOfStrings(miscStorage));
+
+//CLASS WORK
